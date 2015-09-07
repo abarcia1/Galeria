@@ -1,6 +1,7 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "Galeria",
     "license": "MIT",
+    "author": "abarcia1",
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
