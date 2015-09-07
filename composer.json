@@ -1,7 +1,13 @@
 {
-    "name": "galeria",
+    "name": "galeria/galeria",
     "license": "MIT",
-    "author": "abarcia1",
+    "authors": [
+        {
+            "name": "Angel Barcia",
+            "email": "abarcia@summa.es",
+            "role": "Developer"
+        }
+    ],
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
