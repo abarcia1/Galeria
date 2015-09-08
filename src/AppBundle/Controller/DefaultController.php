@@ -18,4 +18,22 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         ));
     }
+
+    /**
+     * @Route("/photos/{id}", defaults={"id": 1}, requirements={
+     *     "id": "\d+"
+     * })
+     */
+    public function photosAction($id)
+    {
+        //Aqui va el código
+    }
+
+    /**
+     * @Route("/photos/{slug}")
+     */
+    public function photosNameAction($slug)
+    {
+       //Aqui va el código
+    }
 }
