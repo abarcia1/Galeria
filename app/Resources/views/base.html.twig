@@ -8,6 +8,7 @@
     </head>
     <body>
         {% block body %}{% endblock %}
+        {{ recipe.id }} {{ recipe.name }} {{ recipe.description }}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
