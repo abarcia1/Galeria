@@ -40,11 +40,11 @@ class Author
      */
     protected $recipes;
 
-    public function __construct()
+    public function __construct($name, $surname)
     {
-//        $this->name = $name;
-//        $this->surname = $surname;
-//        $this->recipes = new ArrayCollection();
+        $this->name = $name;
+        $this->surname = $surname;
+        $this->recipes = new ArrayCollection();
     }
 
 
@@ -107,28 +107,5 @@ class Author
     public function getRecipes()
     {
         return $this->recipes;
-    }
-
-    /**
-     * Add recipes
-     *
-     * @param \AppBundle\Entity\Recipe $recipes
-     * @return Author
-     */
-    public function addRecipe(\AppBundle\Entity\Recipe $recipes)
-    {
-        $this->recipes[] = $recipes;
-
-        return $this;
-    }
-
-    /**
-     * Remove recipes
-     *
-     * @param \AppBundle\Entity\Recipe $recipes
-     */
-    public function removeRecipe(\AppBundle\Entity\Recipe $recipes)
-    {
-        $this->recipes->removeElement($recipes);
     }
 }
