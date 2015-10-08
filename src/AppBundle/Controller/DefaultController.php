@@ -25,7 +25,16 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/crear", name="Crear")
+     * @Route("/inicio", name="inicio")
+     */
+    public function inicioAction(Request $request)
+    {
+
+        return $this->render('recipes.html.twig');
+    }
+
+    /**
+     * @Route("/crear", name="crear")
      */
     public function createAction()
     {
@@ -57,7 +66,7 @@ class DefaultController extends Controller
 
         $em->flush();
 
-        return $this->render('base.html.twig', array('recipe' => $recipe));
+        return $this->render('recipes.html.twig', array('recipe' => $recipe));
 
 
     }
@@ -83,7 +92,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/modificar/{id}", name="Modificar")
+     * @Route("/modificar/{id}", name="modificar")
      */
     public function showAction($id)
     {
@@ -96,7 +105,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/eliminar/{id}", name="Eliminar")
+     * @Route("/eliminar/{id}", name="eliminar")
      */
     public function deleteAction($id)
     {
@@ -110,15 +119,14 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/topchef", name="TopChef")
+     * @Route("/topchef", name="top_chef")
      */
     public function topChefsAction()
     {
         $repository =$this->getDoctrine()->getRepository('AppBundle:Author');
         $chefs = $repository->findTopChefs();
-        var_dump($chefs);
-        die();
-        return new Response ();
+
+        return $this->render('topchef.html.twig', array('chefs' => $chefs));
 
     }
 

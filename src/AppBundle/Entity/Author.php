@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * Author
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="AppBundle\Repository\AuthorRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\AuthorRepository")
  */
 class Author
 {
